@@ -3,7 +3,7 @@ import "./style.scss"
 
 const index = () => {
 	return (
-		<section className="page_404 w-full h-full">
+		<section className="error page_404 w-full h-full">
 			<div className="container mx-auto">
 				<div className="row">
 					<div className="col-sm-12 ">

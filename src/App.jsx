@@ -1,8 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import { Header, Footer } from "@components"
 import { MainLayout } from "@components/layouts"
-import { Home, About, Contact, Service, Error } from "@pages"
-
+import routerLinks from "./mocks/router"
 
 const App = () => {
   return (
@@ -10,11 +9,11 @@ const App = () => {
       <Header />
       <MainLayout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="*" element={<Error />} />
+          {
+            routerLinks.length
+             &&
+             routerLinks.map((item=> <Route key={item.id} path={item.path} element={item.component}/>))
+          }
         </Routes>
       </MainLayout>
       <Footer />

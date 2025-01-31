@@ -13,6 +13,7 @@ export default defineConfig({
       "@pages": path.resolve(__dirname, "./src/views"),
       "@layouts": path.resolve(__dirname, "./src/components/layouts"),
       "@images": path.resolve(__dirname, "./src/assets/images"),
+      "@mocks":path.resolve(__dirname, "./src/mocks/router.jsx")
     }
   }
 })
